@@ -1,0 +1,1067 @@
+html {
+    scroll-behavior: smooth;
+    margin: 0px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #7FA1C3;
+    margin: 0px;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*Cover*/
+/*Start Main Text*/
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Src/texture2.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    transition: transform 1s ease-in-out;
+    z-index: 100;
+}
+
+
+.mainText {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mainText h3 {
+    font-weight: 300;
+}
+
+.mainText h1 {
+    font-family: "Lavishly Yours", cursive;
+    font-size: 48px;
+}
+/* Button Music */
+#audioPlayer {
+    display: none;
+}
+
+.music-player {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.music-player button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.music-player button:hover {
+    color: #ffdd57;
+}
+
+.music-player i {
+    pointer-events: none;
+}
+
+
+/*Cover SlideUp*/
+.slide-up {
+    transform: translateY(-100%);
+}
+
+/*Button*/
+.btn {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.button {
+    height: 30px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #7FA1C3;
+    transition: 200ms;
+}
+
+.button:hover {
+    border-radius: 20px;
+    background-color: #003bfb;
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/*Button*/
+.photo img {
+    width: 90vw;
+    background-color: #55679C;
+    border: #1E2A5E solid 14px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: 20px;
+}
+
+.photo {
+    text-align: center;
+}
+
+.invitation {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    background-color: transparent;
+    width: 100vw;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.btn,
+.box {
+    width: 90%;
+    margin: 10px 0;
+    margin-inline: 20px;
+    background-color: transparent;
+}
+
+.box {
+    background-color: #e1d7b7ae;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.box p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+    background-color: transparent;
+    margin-block: 5vw;
+}
+
+/*Cover*/
+
+/*Content*/
+.content {
+    display: none;
+    padding: 0px;
+    z-index: 1;
+    opacity: 1;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.content.visible {
+    display: block;
+    opacity: 1;
+
+}
+
+/*Navbar*/
+.footer-navbar {
+    background-color: #99aeae90;
+    border-radius: 25px;
+    width: 75%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    /* Letakkan posisi kiri di tengah layar */
+    transform: translateX(-50%);
+    /* Pindahkan navbar ke kiri sebesar 50% dari lebarnya untuk menengahkan */
+    padding: 10px;
+    text-align: center;
+    z-index: 4;
+}
+
+.footer-navbar nav ul {
+    background-color: transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-navbar nav ul li {
+    background-color: transparent;
+    margin: 0 15px;
+}
+
+.footer-navbar nav {
+    background-color: transparent;
+}
+
+.footer-navbar nav ul li a {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    color: #fff;
+
+}
+
+.footer-navbar nav ul li a img {
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+}
+
+/* Efek saat di-hover */
+.footer-navbar nav ul li a:hover {
+    transform: scale(1.3);
+}
+
+/*Navbar End*/
+
+/*MainContent*/
+/*MainPhoto*/
+.main-photo {
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.main-photo img {
+    margin: 0px;
+    width: 100vw;
+    height: auto;
+    filter: brightness(65%);
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+/*MainPhoto*/
+
+.mainText1 {
+    width: 100%;
+    top: 15vh;
+    position: absolute;
+    color: #F1E7E7;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.mainText1 h2 {
+    font-family: "Playwrite CU", cursive;
+}
+
+
+/*Section 1*/
+
+
+.ayat {
+    width: 60vw;
+    margin: 10px;
+    padding-inline: 35px;
+    text-align: center;
+    background-color: #55679C;
+    color: rgb(236, 230, 230);
+    border-radius: 20px;
+    font-size: 90%;
+}
+
+/*Profile*/
+
+.section2 {
+    display: block;
+    justify-content: center;
+    margin: 0px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, );
+}
+
+.profil img {
+    width: 50vw;
+    border-radius: 50%;
+    margin-block: 15px;
+    /* box-shadow: -10px 10px #80da6b; */
+}
+
+.profil h2 {
+    font-size: small;
+    color: #fff;
+    font-weight: 500;
+}
+
+.profil {
+    margin-block: 20px;
+}
+
+.profil a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sosmed img {
+    width: 5vw;
+}
+
+/*End Profile*/
+
+/*Date and Location*/
+
+.center-DL {
+    text-align: center;
+}
+
+#date-location {
+    max-width: 100vw;
+    background: url(/assets/image/texture5.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 90px;
+    height: 170vh;
+    background-size: cover;
+    padding-block: 30px;
+    margin-block: 50px;
+    color: #fff;
+}
+
+#date {
+    margin-inline: 50px;
+    background-color: #1e2a5ef4;
+    border: #000;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+#date div
+a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: small;
+}
+
+#date h3 {
+    font-family: "Playwrite CU", cursive;
+    color: #fff;
+}
+
+/*End Data and Location */
+#location{
+    border-radius: 50px;
+    background-color: #1e2a5ef4;
+    padding-bottom: 20px;
+    max-width: 90vw;
+
+}
+
+.maps {
+    font-family: "Playwrite CU", cursive;
+    margin-top: 70px;
+    border-radius: 20px;
+    max-width: 100vw;
+    height: 100vw;
+    box-shadow: #000;
+}
+
+/* Gallery */
+#gallery {
+    text-align: center;
+    font-family: "Playwrite CU", cursive;
+    color: #fff;
+    font-size: larger;
+}
+
+.gallery-text {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    margin: 10px;
+}
+
+.video video {
+    border-radius: 20px;
+    width: 300px;
+    height: auto;
+}
+
+.gallery {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.gallery-track {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.gallery-item {
+    margin-inline: 10px;
+    flex: 0 0 100vw; 
+    scroll-snap-align: start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hapus scrollbar */
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery {
+    -ms-overflow-style: none;  /* IE dan Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Tabel Tamu */
+#Tamu {
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    margin: 5px;
+    background: url(Src/texture4.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+table {
+    width: 90vw;
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin-top: 50px;
+}
+
+th,
+td {
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+caption {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: "Playwrite CU", cursive;
+}
+
+/* Story */
+#story h3{
+    font-family: "Playwrite CU", cursive;
+    color: #fff;
+    text-align: center;
+}
+
+.story-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* Track yang menampung semua slide */
+.story-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+/* Setiap slide */
+.story-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Gambar di dalam slide */
+.story-slide img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Deskripsi di bawah gambar */
+.description {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Tombol navigasi */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Posisi tombol kiri dan kanan */
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .description {
+        font-size: 14px;
+    }
+}
+/* RSVP */
+#rsvp{
+    background: rgb(19,12,138);
+    background: linear-gradient(180deg, rgba(19,12,138,1) 0%, rgba(17,17,205,1) 11%, rgba(127,161,195,1) 100%);
+    text-align: center;
+    margin: 40px;
+    border-radius: 120px;
+    color: #202033;
+}
+
+#rsvp img{
+    width: 20vw;
+    margin-top: 40px;
+}
+
+.rsvp-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rsvp-btn:disabled {
+    background-color: #808080;
+}
+
+/* Popup background */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* Popup box */
+.popup-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.close-btn {
+    position: fixed;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Form styling */
+.rsvpForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+ 
+.rsvpForm label {
+    text-align: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-right: 10px;
+    text-align: left;
+}
+
+.rsvp-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rsvp-submit:hover {
+    background-color: #0056b3;
+}
+
+/* RSVP summary styling */
+.rsvp-summary {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    display: none;
+}
+/* Gift */
+#gift h5{
+    color: #fff;
+    font-family: "Playwrite CU", cursive;
+}
+
+#gift{
+    margin: 20px;
+}
+
+.gift-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 1px0 auto;
+    background-color: #ffffff4f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian QR Code */
+.qr-section {
+    margin-bottom: 20px;
+}
+
+.qr-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Bagian informasi rekening */
+.bank-info {
+    margin-top: 20px;
+}
+
+/* Tombol salin */
+.copy-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+}
+/* Pesan */
+#pesan {
+    width: 90vw;
+    margin-inline: 10px ;
+    display: flex;
+    justify-content: center;
+}
+
+.notification {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    display: none; /* Disembunyikan secara default */
+}
+
+.message-container {
+    background-color: white;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    width: 90vw;
+    max-width: 500px;
+}
+
+.message-container h2 {
+    font-family: "Playwrite CU", cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.message-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+    /* Warna teks diubah agar terlihat di atas background */
+}
+
+.message-container select,
+.message-container button,
+.message-container textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    /* Agar elemen tidak melebihi lebar container */
+}
+
+.message-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.message-container button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Footer - Ucapan Terima kasih */
+footer {
+    text-align: center;
+    margin: 15px;
+    margin-bottom: 80px;
+    color: #fff;
+}
+
+footer h3 {
+    font-weight: 400;
+    padding-inline: 10vw;
+    font-size: 24px;
+}
+
+footer h2 {
+    font-family: "Playwrite CU", cursive;
+}
+
+/*MainContent*/
+
+/*Content*/
+
+
+/*Elemen*/
+.plus1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#c-R {
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+#c-L {
+    top: 0px;
+    margin: 20px;
+}
+
+/*Side Picture/Image*/
+.main-elemen {
+    position: absolute;
+    top: 60vh;
+}
+
+#center {
+    width: 90vw;
+    position: absolute;
+}
+
+#left {
+    transform: scaleX(-1);
+}
+
+#right {
+    right: 0;
+}
+
+/* .element {
+    position: relative;
+    overflow: hidden;
+} */
+
+
+#element-pesan{
+    display: flex;
+    justify-content: space-between;
+    bottom: 20px;
+}
+
+.element img{
+    width: 30vw;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+/*End Side picture*/
+
+.element1 {
+    width: 40vw;
+    background-color: transparent;
+    position: absolute;
+}
+
+.element2 {
+    text-align: center;
+}
+
+.element2 img {
+    width: 420px;
+}
+
+
+
+#E-1 {
+    top: 0;
+    margin: 0px;
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+#E-2 {
+    left: 0;
+    margin: 0px;
+    transform: rotate(90deg);
+}
+
+#E-3 {
+    width: 20%;
+    margin: 10px;
+    right: 0;
+    margin: 0px;
+}
+
+.right {
+    position: absolute;
+    right: -50px;
+    top: 0;
+}
+
+.left {
+    position: absolute;
+    transform: rotate(180deg);
+    left: -50px;
+    top: 0;
+}
+
+
+/* Global Responsiveness */
+@media (max-width: 767px) {
+    .photo img {
+        width: 90vw;
+    }
+
+    .profil img {
+        width: 70vw;
+    }
+
+    .maps, .gallery-item img, .video video {
+        width: 90%;
+    }
+
+    .gallery-track, .gallery-item {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .photo img {
+        width: 400px;
+    }
+
+    .profil img {
+        width: 40vw;
+    }
+
+    .gallery-item{
+        flex: 100vw;
+    }
+
+    .gallery-item img {
+        width: 400px;
+    }
+
+    .gallery-content{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .element img {
+        width: 300px;
+    }
+
+    .main-photo img {
+        height: 100vh;
+    }
+
+    .footer-navbar {
+        width: 50%;
+    }
+}
+
+/* Responsiveness for tablet and larger screens */
+@media (min-width: 1024px) {
+    .main-photo img {
+        width: 40%;
+        height: 100vh;
+    }
+
+    .mainText1{
+        backdrop-filter: blur(8px);
+        backdrop-filter: brightness(75%);
+        border-radius: 90px;
+        right: 0;
+        width: 40vw;
+    }
+
+    main{
+        width: 100%;
+        background-image: url(/assets/image/ring.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .section2{
+        display: flex;
+    }
+
+    .gallery-content{
+        display: flex;
+    }
+
+    .gallery-item img {
+        max-width: 200px;
+    }
+
+    .profil img {
+        width: 20vw;
+        margin-inline: 30px;
+    }
+
+    .element2 img{
+        max-width: 300px;
+    }
+
+    .element1{
+        max-width: 300px;
+    }
+
+    #date-location{
+        display: flex;
+        justify-content: space-around;
+        max-height: 90vh;
+    }
+
+    #location{
+        max-height: 90vh;
+    }
+}
