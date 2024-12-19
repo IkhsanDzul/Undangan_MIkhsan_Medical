@@ -50,35 +50,13 @@ function closePopup() {
   document.getElementById('popupOverlay').style.display = 'none';
 }
 
-function submitRSVP(event) {
-  event.preventDefault();
+//RSVP
+function openModal() {
+    document.getElementById('modalOverlay').classList.add('active');
+}
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const attendance = document.querySelector('input[name="attendance"]:checked').value;
-  const food = document.getElementById('food').value;
-  const special = document.getElementById('special').value || "None";
-  const subscribe = document.querySelector('input[name="subscribe"]:checked') ? 'Yes' : 'No';
-
-  const rsvpDetails = `
-      <strong>Name:</strong> ${name}<br>
-      <strong>Email:</strong> ${email}<br>
-      <strong>Phone:</strong> ${phone}<br>
-      <strong>Attendance:</strong> ${attendance}<br>
-      <strong>Preferred Food:</strong> ${food}<br>
-      <strong>Special Requests:</strong> ${special}<br>
-      <strong>Subscribed to Updates:</strong> ${subscribe}
-  `;
-  document.getElementById('rsvpDetails').innerHTML = rsvpDetails;
-  document.getElementById('rsvpSummary').style.display = 'block';
-
-  const rsvpBtn = document.getElementById('rsvpBtn');
-  rsvpBtn.innerText = "Terimakasih!";
-  rsvpBtn.disabled = true;
-
-  // Tutup popup
-  closePopup();
+function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
 }
 
 const storyTrack = document.querySelector('.story-track');
@@ -141,3 +119,4 @@ form.addEventListener('submit', function(event) {
         notification.style.display = 'none';
     }, 3000);
 });
+
