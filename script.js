@@ -120,3 +120,43 @@ form.addEventListener('submit', function(event) {
     }, 3000);
 });
 
+
+<script>
+    function closeModal() {
+        document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    function handleFormSubmit(event) {
+        event.preventDefault(); // Mencegah refresh halaman
+        const form = event.target;
+
+        // Ambil data dari form
+        const name = form.name.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const attendance = form.attendance.value;
+        const food = form.food.value;
+        const requests = form.requests.value;
+        const subscribe = form.subscribe.checked ? 'Yes' : 'No';
+
+        // Buat output
+        const output = `
+            <div class="output">
+                <h4>RSVP Confirmation Output:</h4>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Attendance:</strong> ${attendance}</p>
+                <p><strong>Preferred Food:</strong> ${food}</p>
+                <p><strong>Special Requests:</strong> ${requests || 'None'}</p>
+                <p><strong>Subscribed to Updates:</strong> ${subscribe}</p>
+            </div>
+        `;
+
+        // Tampilkan output di bawah modal
+        document.getElementById('outputContainer').innerHTML = output;
+
+        // Tutup modal
+        closeModal();
+    }
+</script>

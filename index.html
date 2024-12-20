@@ -135,7 +135,7 @@
                         <br>
                     </div>
                     <img data-aos="zoom-in-down" src="assets/image/elemen2.png" alt=""
-                    style="transform: rotate(180deg);">
+                        style="transform: rotate(180deg);">
                 </section>
             </center>
             <!-- End Ayat -->
@@ -202,7 +202,8 @@
                         <div data-aos="fade-in">
                             <i class="fa-solid fa-location-dot"></i>
                             <a href="">
-                                Jl. Harapan Indah Boulevard No.10-12, RT.004/RW.030, Medan Satria, Kecamatan Medan Satria, Kota Bks, Jawa Barat 17131
+                                Jl. Harapan Indah Boulevard No.10-12, RT.004/RW.030, Medan Satria, Kecamatan Medan
+                                Satria, Kota Bks, Jawa Barat 17131
                             </a>
                         </div>
                         <hr>
@@ -303,11 +304,11 @@
             <!-- End Story -->
 
             <!-- Tamu -->
-             <center>
+            <center>
                 <img class="center" src="assets/image/elemen2.png" alt="" style="transform: rotate(180deg);"
-                data-aos="zoom-in-up">
-             </center>
-            
+                    data-aos="zoom-in-up">
+            </center>
+
             <section id="Tamu">
                 <table data-aos="zoom-in-up">
                     <caption data-aos="zoom-in">Daftar Tamu Khusus</caption>
@@ -364,7 +365,7 @@
                         <button class="close-button" onclick="closeModal()">×</button>
                     </div>
                     <div class="modal-body">
-                        <form action="#" method="POST">
+                        <form id="rsvpForm" onsubmit="handleFormSubmit(event)">
                             <div class="form-group">
                                 <label for="name">Name:</label>
                                 <input type="text" id="name" name="name" required>
@@ -408,6 +409,8 @@
                     </div>
                 </div>
             </div>
+
+            <div id="outputContainer"></div>
 
             <!-- Hadiah -->
             <section data-aos="zoom-in-up" id="gift">
